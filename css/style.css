@@ -1,30 +1,30 @@
 /* Global Website Styling */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Website Header */
 
-header{
-    background-color:#ffffff;
-    padding:10px 50px;
-    border-bottom:2px solid #e5e5e5;
+header {
+    background-color: #ffffff;
+    padding: 10px 50px;
+    border-bottom: 2px solid #e5e5e5;
 }
 
 /* Website Logo */
 
-.logo{
+.logo {
     width: 170px;
     height: auto;
 }
 
 /* Navigation Links */
 
-nav a{
+nav a {
 
     text-decoration: none;
     color: #333333;
@@ -36,13 +36,13 @@ nav a{
 
 /* Navigation Link Hover Effect */
 
-nav a:hover{
+nav a:hover {
     color: #ff6b00;
 }
 
 /* Active Navigation Link */
 
-nav a.active{
+nav a.active {
 
     color: #ff6b00;
     border-bottom: 3px solid #ff6b00;
@@ -53,18 +53,18 @@ nav a.active{
 
 /* Home Hero Section */
 
-#home-hero{
+#home-hero {
 
     background-image: url("../assets/images/home-hero.png");
     background-repeat: no-repeat;
-    background-position:center right;
+    background-position: center right;
     background-size: cover;
     height: 430px;
     padding: 55px 80px;
 
 }
 
-#home-hero h1{
+#home-hero h1 {
     color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 52px;
@@ -74,14 +74,14 @@ nav a.active{
     margin-bottom: 20px;
 }
 
-#home-hero h1 span{
+#home-hero h1 span {
     color: #F5A300;
 }
 
 
 /* Home Hero Description */
 
-#home-hero p{
+#home-hero p {
     color: white;
     font-size: 18px;
     line-height: 28px;
@@ -93,11 +93,11 @@ nav a.active{
 
 /* Hero Buttons */
 
-.hero-buttons{
+.hero-buttons {
     margin-top: 25px;
 }
 
-.hero-buttons a{
+.hero-buttons a {
     display: inline-block;
     min-width: 180px;
     padding: 15px 30px;
@@ -110,38 +110,500 @@ nav a.active{
 
 }
 
-.order-btn{
+.order-btn {
     background-color: #F44336;
     color: white;
     margin-right: 15px;
     width: 250px;
-     border: 2px solid white;
+    border: 2px solid white;
 }
 
-.menu-btn{
+.menu-btn {
     background-color: transparent;
     color: white;
     border: 2px solid white;
     width: 250px;
 }
 
-.order-btn:hover{
+.order-btn:hover {
     background-color: #D32F2F;
 
 }
 
-.menu-btn:hover{
+.menu-btn:hover {
     background-color: white;
     color: #222;
 
 }
 
 
+/*--------------------------------- Why Choose BiteBox Section ---------------------------------*/
+
+/* Why Choose BiteBox Section */
+
+#features{
+    background-color:#ffffff;
+    padding:45px 25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* Section Heading */
+
+#features h2{
+    width:100%;
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#222222;
+    margin-bottom:40px;
+    position:relative;
+}
+
+#features h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background-color:#ff6b00;
+    margin:10px auto 0;
+}
+
+/* Feature Card */
+
+#features article{
+    width:300px;
+    padding:0 15px;
+    display:flex;
+    align-items:center;
+    border-right:1px solid #e5e5e5;
+}
+
+#features article:last-child{
+    border-right:none;
+}
+
+/* Feature Icon */
+
+#features article img{
+    width:55px;
+    height:55px;
+    margin-right:20px;
+    flex-shrink:0;
+}
+
+/* Feature Content */
+
+#features article div{
+    flex:1;
+}
+
+/* Feature Title */
+
+#features article h3{
+    font-size:18px;
+    font-weight:700;
+    color:#000000;
+    margin-bottom:6px;
+}
+
+/* Feature Description */
+
+#features article p{
+    font-size:16px;
+    color:#3a3939;
+    line-height:21px;
+    margin:0;
+}
+
+
+/*--------------------------------- Popular Dishes Section ---------------------------------*/
+
+/* Popular Dishes Section */
+
+#popular-dishes{
+    background-color:#ffffff;
+    padding:60px 30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+/* Section Heading */
+
+#popular-dishes h2{
+    width:100%;
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#222222;
+    margin-bottom:22px;
+    position:relative;
+}
+
+#popular-dishes h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background-color:#ff6b00;
+    margin:10px auto 0;
+}
+
+/* Dish Card */
+
+#popular-dishes article{
+    width:225px;
+    background-color:#ffffff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,0.12);
+}
+
+/* Food Image */
+
+#popular-dishes article img{
+    width:100%;
+    height:135px;
+    object-fit:cover;
+    display:block;
+}
+
+/* Dish Name */
+
+#popular-dishes article h3{
+    font-size:18px;
+    font-weight:700;
+    color:#222222;
+    margin:10px 12px 6px;
+}
+
+/* Rating & Price */
+
+#popular-dishes .details{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 12px 10px;
+}
+
+/* Ratings */
+
+#popular-dishes .ratings{
+    color:#f5b301;
+    font-size:18px;
+    font-weight:600;
+    margin:0;
+}
+
+/* Review Count */
+
+#popular-dishes .ratings small{
+    color:#666666;
+    font-size:12px;
+}
+
+/* Price */
+
+#popular-dishes .price{
+    color:#f44336;
+    font-size:20px;
+    font-weight:700;
+    margin:0;
+}
+
+/* Hover Effect */
+
+#popular-dishes article:hover{
+    box-shadow:0 8px 22px rgba(0,0,0,0.18);
+}
+
+
+
+/*--------------------------------- Today's Special Offer Section ---------------------------------*/
+
+#offer{
+    width:95%;
+    height:250px;
+    margin:40px auto;
+    padding:28px 55px;
+    box-sizing:border-box;
+    background-image:url("../assets/images/offer-banner.png");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    border-radius:20px;
+}
+
+/* Offer Content */
+
+.offer-content{
+    width:38%;
+}
+
+/* Heading */
+
+.offer-content h2{
+    font-size:34px;
+    font-weight:800;
+    color:#ffffff;
+    line-height:1.15;
+    margin-bottom:15px;
+}
+
+.offer-content h2 span{
+    background:linear-gradient(180deg,#ffffff 0%,#fff9d8 25%,#ffe47a 55%,#ffc107 80%,#ff9800 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+/* Description */
+
+.offer-content p{
+    font-size:18px;
+    color:#ffffff;
+    line-height:1.5;
+    margin-bottom:10px;
+}
+
+.offer-content strong{
+    color:#ffb400;
+}
+
+/* Button */
+
+.offer-content a{
+    display:inline-block;
+    margin-top:8px;
+    padding:12px 32px;
+    background:#ff3b30;
+    color:#ffffff;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+    border-radius:8px;
+    width: 200px;
+    text-align: center;
+}
+
+.offer-content a:hover{
+    background-color: #D32F2F;
+}
+
+
+/*--------------------------------- Customer Reviews Section ---------------------------------*/
+
+#reviews{
+    background:#ffffff;
+    padding:20px 30px 40px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
+}
+
+/* Section Heading */
+
+#reviews h2{
+    width:100%;
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#222222;
+    margin-bottom:30px;
+    position:relative;
+}
+
+#reviews h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background:#ff6b00;
+    margin:10px auto 0;
+}
+
+/* Review Card */
+
+#reviews article{
+    width:330px;
+    background:#ffffff;
+    padding:22px 20px 18px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.12);
+    position:relative;
+}
+
+/* Quote Icon */
+
+#reviews article::before{
+    content:"❝";
+    position:absolute;
+    top:-14px;
+    left:18px;
+    font-size:42px;
+    color:#ff3b30;
+    background:#ffffff;
+    line-height:1;
+    padding:0 4px;
+}
+
+/* Review Text */
+
+#reviews article>p{
+    font-size:15px;
+    color:#444444;
+    line-height:22px;
+    margin:0 0 14px;
+}
+
+/* Customer Section */
+
+#reviews .customer{
+    display:flex;
+    align-items:center;
+}
+
+/* Customer Image */
+
+#reviews .customer img{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-right:10px;
+}
+
+/* Customer Name */
+
+#reviews .customer h3{
+    font-size:17px;
+    font-weight:700;
+    color:#222222;
+    margin:0 0 4px;
+}
+
+/* Rating */
+
+#reviews .customer span{
+    color:#f5b301;
+    font-size:16px;
+}
+
+/* Hover Effect */
+
+#reviews article:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,0.18);
+}
+
+
+/*--------------------------------- Newsletter Section ---------------------------------*/
+
+/* Newsletter Section */
+
+#newsletter{
+    width:100%;
+    margin:10px 0 0;
+    padding:10px 65px;
+    background:linear-gradient(to right,#f44336,#e53935,#d32f2f);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-sizing:border-box;
+}
+
+/* Left Content */
+
+.newsletter-content{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+/* Mail Icon */
+
+.newsletter-content img{
+    width:55px;
+    height:55px;
+    background:#ffffff;
+    border-radius:50%;
+    padding:8px;
+}
+
+/* Heading */
+
+.newsletter-content h2{
+    font-size:28px;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:2px;
+    line-height:1.1;
+}
+
+/* Description */
+
+.newsletter-content p{
+    font-size:15px;
+    color:#ffeaea;
+    line-height:20px;
+    margin:0;
+}
+
+/* Newsletter Form */
+
+.newsletter-form{
+    display:flex;
+    align-items:center;
+}
+
+/* Email Input */
+
+.newsletter-form input{
+    width:300px;
+    height:38px;
+    border:none;
+    outline:none;
+    padding:0 14px;
+    font-size:14px;
+    border-radius:4px 0 0 4px;
+}
+
+/* Subscribe Button */
+
+.newsletter-form button{
+    height:38px;
+    padding:0 24px;
+    border:none;
+    background:#111111;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:0 4px 4px 0;
+}
+
+/* Newsletter Image */
+
+.newsletter-image img{
+    width:140px;
+    height:auto;
+    display:block;
+}
+
+/* Hover Effect */
+
+.newsletter-form button:hover{
+    background:#000000;
+}
+
 
 /*---------------------------------Menu page CSS ---------------------------------------*/
 
 /*Menu hero bckground */
-#menu-hero{
+#menu-hero {
     background-image: url("../assets/images/menu-hero.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -153,22 +615,22 @@ nav a.active{
 }
 
 
-#menu-hero h1{
+#menu-hero h1 {
 
     font-family: "Great Vibes", cursive;
     font-size: 56px;
-    line-height:60px;
+    line-height: 60px;
     font-weight: 400;
     color: white;
     text-align: center;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
 
 }
 
 /* Menu Hero Description */
 
-#menu-hero p{
+#menu-hero p {
 
     color: white;
     font-size: 20px;
@@ -179,76 +641,257 @@ nav a.active{
 
 }
 
+/*--------------------------------- Browse Categories Section ---------------------------------*/
+
 /* Browse Categories Section */
 
 #categories{
-
-    background-color: #ffffff;
-
-    padding: 60px 80px;
-
-    text-align: center;
-
+    background-color:#ffffff;
+    padding:60px 30px;
+    text-align:center;
+     border-bottom:2px solid #e5e5e5;
 }
 
-
-/* Browse Categories Heading */
+/* Section Heading */
 
 #categories h2{
-
-    font-size: 40px;
-
-    font-weight: 700;
-
-    color: #222222;
-
-    margin-bottom: 50px;
-
-    position: relative;
-
-    display: inline-block;
-
+    font-size:42px;
+    font-weight:700;
+    color:#222222;
+    margin-bottom:45px;
 }
 
+#categories h2 span{
+    display:inline-block;
+    width:70px;
+    height:3px;
+    background:#ff3b30;
+    vertical-align:middle;
+    margin:10px 50px;
+    position:relative;
+}
 
+#categories h2 span::before{
+    content:"";
+    width:8px;
+    height:8px;
+    background:#ff3b30;
+    border-radius:50%;
+    position:absolute;
+    top:-2px;
+}
 
+#categories h2 span:first-child::before{
+    right:-12px;
+}
 
+#categories h2 span:last-child::before{
+    left:-12px;
+}
 
-/* Category Icons */
+/* Categories Container */
+
+#categories div{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:55px;
+}
+
+/* Category Item */
+
+#categories article{
+    text-align:center;
+}
+
+/* Category Icon */
 
 #categories article img{
-
-    width: 120px;
-    height: 120px;
-
-    padding: 22px;
-
-    background: #fff;
-
-    border-radius: 50%;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-
-    object-fit: contain;
-
-    margin-bottom: 18px;
-
+    width:100px;
+    height:90px;
+    padding:10px;
+    background:#ffffff;
+    border:2px solid #f2f2f2;
+    border-radius:50%;
+    object-fit:contain;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    margin-bottom:15px;
 }
 
-/* Category Names */
+/* Category Name */
 
 #categories article h3{
+    font-size:20px;
+    font-weight:600;
+    color:#333333;
+}
 
-    font-size: 20px;
+/* Hover Effect */
 
-    font-weight: 600;
+#categories article img:hover{
+    box-shadow:0 8px 18px rgba(0,0,0,0.18);
+}
 
-    color: #333333;
 
-    text-align: center;
+/*--------------------------------- Menu Items Section ---------------------------------*/
 
-    margin-top: 18px;
+/* Menu Items Section */
 
+#menu-items{
+    background:#ffffff;
+    padding:60px 25px;
+    text-align:center;
+}
+
+/* Section Heading */
+
+#menu-items h2{
+    font-size:42px;
+    font-weight:700;
+    color:#222222;
+    margin-bottom:40px;
+}
+
+#menu-items h2 span{
+    display:inline-block;
+    width:30px;
+    height:3px;
+    background:#ff3b30;
+    margin:0 15px;
+    position:relative;
+    vertical-align:middle;
+}
+
+#menu-items h2 span::before{
+    content:"";
+    width:8px;
+    height:8px;
+    background:#ff3b30;
+    border-radius:50%;
+    position:absolute;
+    top:-2px;
+}
+
+#menu-items h2 span:first-child::before{
+    right:-12px;
+}
+
+#menu-items h2 span:last-child::before{
+    left:-12px;
+}
+
+/* Menu Items Container */
+
+#menu-items > div{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+/* Menu Item Card */
+
+#menu-items article{
+    width:235px;
+    background:#ffffff;
+    border:1px solid #ececec;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,0.10);
+    text-align:left;
+    position:relative;
+    margin: 10px;
+}
+
+/* Badge */
+
+.tag{
+    position:absolute;
+    top:8px;
+    left:8px;
+    background:#e53935;
+    color:#ffffff;
+    padding:4px 10px;
+    font-size:11px;
+    font-weight:600;
+    border-radius:20px;
+}
+
+.spicy{
+    background:#ff5722;
+}
+
+/* Food Image */
+
+#menu-items article img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+    display:block;
+}
+
+/* Food Name */
+
+#menu-items article h3{
+    font-size:17px;
+    font-weight:600;
+    color:#333333;
+    margin:10px;
+}
+
+/* Rating */
+
+.rating{
+    margin:0 10px 8px;
+    color:#f5b301;
+    font-size:15px;
+}
+
+.rating small{
+    color:#666666;
+    font-size:12px;
+}
+
+/* Price */
+
+.price{
+    margin:0 10px 12px;
+    font-size:20px;
+    font-weight:700;
+    color:#333333;
+}
+
+/* Add to Cart Button */
+
+#menu-items article button{
+    width:calc(100% - 20px);
+    margin:0 10px 12px;
+    padding:9px 0;
+    background:#ffffff;
+    color:#ff4d4d;
+    border:1px solid #ff4d4d;
+    border-radius:6px;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+#menu-items article button img{
+    width:14px;
+    height:14px;
+}
+
+/* Hover Effect */
+
+#menu-items article:hover{
+    box-shadow:0 8px 18px rgba(0,0,0,0.18);
 }
 
 
@@ -259,7 +902,7 @@ nav a.active{
 /*---------------------------------Contact page CSS ---------------------------------------*/
 /* Contact Hero Section */
 
-#contact-hero{
+#contact-hero {
     background-image: url("../assets/images/contact-hero.png");
 
     background-repeat: no-repeat;
@@ -278,7 +921,7 @@ nav a.active{
 
 /* Contact Hero Heading */
 
-#contact-hero h2{
+#contact-hero h2 {
 
     color: #ffffff;
     font-size: 52px;
@@ -289,7 +932,7 @@ nav a.active{
 
 /* Highlight 'Us' */
 
-#contact-hero h2 span{
+#contact-hero h2 span {
 
     color: #ff6b00;
 
@@ -297,7 +940,7 @@ nav a.active{
 
 /* Contact Hero Subtitle */
 
-#contact-hero h3{
+#contact-hero h3 {
 
     color: #ffffff;
     font-size: 19px;
@@ -308,7 +951,7 @@ nav a.active{
 
 /* Contact Hero Decorative Line */
 
-#contact-hero hr{
+#contact-hero hr {
 
     width: 70px;
     height: 4px;
@@ -321,7 +964,7 @@ nav a.active{
 
 /* Contact Hero Description */
 
-#contact-hero p{
+#contact-hero p {
 
     color: #ffffff;
     font-size: 18px;
@@ -333,10 +976,10 @@ nav a.active{
 
 
 
-/*---------------------------------Contact page CSS ---------------------------------------*/
+/*---------------------------------about page CSS ---------------------------------------*/
 /* About Hero Section */
 
-#about-hero{
+#about-hero {
 
     background-image: url("../assets/images/about-hero.png");
 
@@ -356,7 +999,7 @@ nav a.active{
 
 /* About Hero Content */
 
-#about-hero .hero-content{
+#about-hero .hero-content {
 
     width: 400px;
     text-align: left;
@@ -367,7 +1010,7 @@ nav a.active{
 
 /* About Hero Heading */
 
-#about-hero h2{
+#about-hero h2 {
 
     color: #ffffff;
 
@@ -387,7 +1030,7 @@ nav a.active{
 
 /* About Highlight */
 
-#about-hero h2 span{
+#about-hero h2 span {
 
     font-family: "Allura", cursive;
 
@@ -403,7 +1046,7 @@ nav a.active{
 
 /* About Hero Subtitle */
 
-#about-hero p{
+#about-hero p {
 
     color: #ffffff;
 
@@ -417,7 +1060,7 @@ nav a.active{
 
 /* Decorative Line */
 
-#about-hero hr{
+#about-hero hr {
 
     width: 45px;
 
@@ -431,15 +1074,408 @@ nav a.active{
 
 }
 
+/*--------------------------------- Our Story Section ---------------------------------*/
+
+#story{
+    background:#ffffff;
+    padding:80px 70px;
+}
+
+/* Layout */
+
+#story>article{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+}
+
+/* Restaurant Image */
+
+#story>article>img{
+    width:500px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+/* Right Content */
+
+.story-content{
+    width:520px;
+}
+
+/* Small Heading */
+
+.story-content small{
+    color:#ff6b35;
+    font-size:30px;
+    font-weight:800;
+    font-family:"Allura",cursive;
+}
+
+/* Main Heading */
+
+.story-content h2{
+    font-size:40px;
+    color:#222;
+    line-height:58px;
+    margin:8px 0 20px;
+}
+
+.story-content h2 span{
+    color:#ff6b35;
+    font-family:"Allura",cursive;
+    font-size:56px;
+    font-weight:400;
+}
+
+/* Paragraph */
+
+.story-content p{
+    color:#666;
+    font-size:16px;
+    line-height:30px;
+    margin-bottom:18px;
+}
+
+/* Feature Section */
+
+.story-features{
+    display:flex;
+    justify-content:space-between;
+    margin-top:35px;
+}
+
+/* Feature */
+
+.story-features article{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* Circular Icon */
+
+.feature-icon{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#fff2ea;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.feature-icon img{
+    width:26px;
+    height:26px;
+}
+
+/* Feature Heading */
+
+.story-features h4{
+    font-size:15px;
+    color:#222;
+    margin-bottom:2px;
+}
+
+/* Feature Text */
+
+.story-features article p{
+    margin:0;
+    font-size:14px;
+    color:#555;
+    line-height:20px;
+}
+
+
+
+/* Vision and mission*/
+/* Section */
+
+#mission-vision{
+    background:#ffffff;
+    padding:0px 80px;
+}
+
+/* Section Heading */
+
+#mission-vision>h2{
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#222222;
+    margin-bottom:50px;
+    position:relative;
+}
+
+#mission-vision>h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background:#ff6b00;
+    margin:12px auto 0;
+}
+
+/* Cards Container */
+
+#mission-vision>div{
+    display:flex;
+    justify-content:center;
+}
+
+/* Card */
+
+#mission-vision article{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:22px;
+
+    background:#fff9f4;
+    padding:35px;
+
+    border:1px solid #ffe5d2;
+}
+
+#mission-vision article:first-child{
+    border-radius:15px 0 0 15px;
+    border-right:none;
+}
+
+#mission-vision article:last-child{
+    border-radius:0 15px 15px 0;
+}
+
+/* Divider */
+
+#mission-vision article:last-child{
+    border-left:1px solid #ffd8bf;
+}
+
+/* Icon */
+
+#mission-vision article img{
+    width:65px;
+    height:65px;
+    background:#fff1e6;
+    border-radius:50%;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+/* Card Heading */
+
+#mission-vision article h3{
+    font-size:24px;
+    color:#222222;
+    margin-bottom:10px;
+}
+
+/* Description */
+
+#mission-vision article p{
+    color:#555555;
+    font-size:16px;
+    line-height:28px;
+}
+
+
+/*--------------------------------- Meet Our Chefs ---------------------------------*/
+
+/* Section */
+
+#chefs{
+    background:#ffffff;
+    padding:80px 70px;
+    text-align:center;
+}
+
+/* Small Heading */
+
+#chefs>small{
+    display:block;
+    font-family:"Allura",cursive;
+    font-size:44px;
+    color:#ff6b00;
+    margin-bottom:5px;
+    font-weight: 400;
+}
+
+/* Main Heading */
+
+#chefs>h2{
+    font-size:42px;
+    color:#222222;
+    font-weight:700;
+    margin-bottom:50px;
+}
+
+#chefs>h2 span{
+    color:#ff6b00;
+    font-family:"Allura",cursive;
+    font-size:52px;
+    font-weight:500;
+}
+
+/* Cards Container */
+
+#chefs>div{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+/* Chef Card */
+
+#chefs article{
+    width:340px;
+    background:#ffffff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    padding-bottom:25px;
+}
+
+/* Chef Image */
+
+#chefs article>img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+}
+
+/* Chef Name */
+
+#chefs article h3{
+    font-size:24px;
+    color:#222222;
+    margin:18px 0 6px;
+}
+
+/* Designation */
+
+#chefs article h4{
+    font-size:16px;
+    color:#ff6b00;
+    margin-bottom:15px;
+}
+
+/* Description */
+
+#chefs article p{
+    color:#666666;
+    font-size:15px;
+    line-height:24px;
+    padding:0 25px;
+    margin-bottom:22px;
+}
+
+/* Social Icons */
+
+.chef-social{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+/* Icons */
+
+.chef-social img{
+    width:20px;
+    height:20px;
+}
+
+/*--------------------------------- Restaurant Statistics ---------------------------------*/
+
+/* Section */
+
+#statistics{
+    background:#ffffff;
+    padding:0px 70px;
+}
+
+/* Heading */
+
+#statistics>h2{
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#222222;
+    margin-bottom:50px;
+    position:relative;
+}
+
+#statistics>h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background:#ff6b00;
+    margin:12px auto 0;
+}
+
+/* Statistics Container */
+
+#statistics>div{
+    display:flex;
+    justify-content:center;
+
+    background:#1d1b1a;
+
+    border-radius:16px;
+
+    overflow:hidden;
+}
+
+/* Statistic Card */
+
+#statistics article{
+    flex:1;
+    text-align:center;
+    padding:35px 20px;
+    border-right:1px solid rgba(255,255,255,.15);
+}
+
+#statistics article:last-child{
+    border-right:none;
+}
+
+/* Icon */
+
+#statistics article img{
+    width:42px;
+    height:42px;
+    margin-bottom:15px;
+}
+
+/* Number */
+
+#statistics article h3{
+    font-size:38px;
+    color:#ffffff;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+/* Text */
+
+#statistics article p{
+    font-size:16px;
+    color:#d0d0d0;
+    margin:0;
+}
 
 /*---------------------------------Cart page CSS ---------------------------------------*/
 
 /* Cart Hero Section */
 
-#cart-hero{
+#cart-hero {
 
     background-image:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
         url("../assets/images/cart-hero.png");
 
     background-repeat: no-repeat;
@@ -459,7 +1495,7 @@ nav a.active{
 
 /* Cart Hero Heading */
 
-#cart-hero h1{
+#cart-hero h1 {
 
     color: #ffffff;
 
@@ -469,19 +1505,19 @@ nav a.active{
 
     font-weight: 400;
 
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 
     margin-bottom: 20px;
 
 }
 
-.divider{
+.divider {
     text-align: center;
     margin-bottom: 25px;
 }
 
 
-.divider hr{
+.divider hr {
     display: inline-block;
     width: 120px;
     height: 3px;
@@ -492,7 +1528,7 @@ nav a.active{
 }
 
 
-.divider img{
+.divider img {
     width: 34px;
     height: 34px;
     margin: 0 15px;
@@ -502,7 +1538,7 @@ nav a.active{
 
 /* Cart Hero Description */
 
-#cart-hero p{
+#cart-hero p {
 
     color: #ffffff;
     font-size: 16px;
