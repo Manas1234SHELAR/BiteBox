@@ -387,5 +387,6 @@ if (cartBody) {
 
 
 
+
 renderCart();
 updateOrderSummary();
