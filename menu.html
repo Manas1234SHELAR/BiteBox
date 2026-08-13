@@ -90,11 +90,30 @@
       <span></span>
     </h2>
 
+    <div class="menu-search">
+
+    <input
+        type="text"
+        id="menu-search"
+        placeholder="Search for dishes..."
+    >
+
+    <button type="button" id="search-button">
+        <img
+            src="assets/icons/search.png"
+            alt="Search"
+            width="20"
+            height="20"
+        >
+    </button>
+
+</div>
+
     <div>
 
       <!-- Menu Item 1 -->
 
-      <article>
+      <article data-category="pizza">
 
         <span class="tag">Bestseller</span>
 
@@ -118,7 +137,7 @@
 
       <!-- Menu Item 2 -->
 
-      <article>
+      <article data-category="burger">
 
         <img src="assets/images/cheese-burger.png" alt="Cheese Burger">
 
@@ -140,7 +159,7 @@
 
       <!-- Menu Item 3 -->
 
-      <article>
+      <article data-category="pasta">
 
         <img src="assets/images/alfredo-pasta.png" alt="Creamy Alfredo Pasta">
 
@@ -162,7 +181,7 @@
 
       <!-- Menu Item 4 -->
 
-      <article>
+      <article data-category="biryani>
 
         <span class="tag spicy">Spicy</span>
 
@@ -186,7 +205,7 @@
 
       <!-- Menu Item 5 -->
 
-      <article>
+      <article data-category="desert">
 
         <img src="assets/images/choco-lava-cake.png" alt="Choco Lava Cake">
 
@@ -208,7 +227,7 @@
 
       <!-- Menu Item 6 -->
 
-      <article>
+      <article data-category="sandwich">
 
         <img src="assets/images/veg-club-sandwich.png" alt="Veg Club Sandwich">
 
@@ -230,7 +249,7 @@
 
       <!-- Menu Item 7 -->
 
-      <article>
+      <article data-category="tandoor">
 
         <img src="assets/images/paneer-tikka.png" >
 
@@ -252,7 +271,7 @@
 
       <!-- Menu Item 8 -->
 
-      <article>
+      <article data-category="tandoor">
 
         <img src="assets/images/tandoori.png">
 
@@ -274,7 +293,7 @@
 
       <!-- Menu Item 9 -->
 
-      <article>
+      <article data-category="starter">
 
         <img src="assets/images/soup.png">
 
@@ -296,7 +315,7 @@
 
       <!-- Menu Item 9 -->
 
-      <article>
+      <article data-category="pasta">
 
         <img src="assets/images/red-sauce-pasta.png" >
 
@@ -318,7 +337,7 @@
 
       <!-- Menu Item 11 -->
 
-      <article>
+      <article data-category="desert">
 
         <img src="assets/images/chocolate-smoothy.png">
 
@@ -341,7 +360,7 @@
 
       <!-- Menu Item 12 -->
 
-      <article>
+      <article data-category="biryani">
 
         <img src="assets/images/fried-rice.png">
 
@@ -360,6 +379,53 @@
         </button>
 
       </article>
+
+
+
+      <!-- Menu Item 12 -->
+
+      <article data-category="pizza">
+
+        <img src="assets/images/cheese-n-corn.png">
+
+        <h3>Cheese n Corn Pizza</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(118)</small>
+        </p>
+
+        <p class="price">₹349</p>
+
+        <button>
+          <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+
+      
+      <article data-category="pizza">
+
+        <img src="assets/images/veggie-paradise.png">
+
+        <h3>Veggie Paradise Pizza</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(142)</small>
+        </p>
+
+        <p class="price">₹489</p>
+
+        <button>
+          <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
 
     </div>
 
@@ -458,7 +524,7 @@
 
     </footer>
 
-
+<script src ="js/script.js"></script>
 </body>
 
 
