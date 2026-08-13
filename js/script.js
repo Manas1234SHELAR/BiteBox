@@ -388,6 +388,74 @@ if (cartBody) {
 }
 
 
+let menuCards = document.querySelectorAll("#menu-items article");
+let searchInput = document.getElementById("menu-search");
+let searchButton = document.getElementById("search-button");
+
+function searchMenu(searchText) {
+    let searchValue = searchText.trim().toLowerCase();
+
+    menuCards.forEach(function (card) {
+        let foodName = card.querySelector("h3").textContent.trim().toLowerCase();
+
+        if (foodName.includes(searchValue)) {
+            card.style.display = "";
+        }
+        else {
+            card.style.display = "none";
+        }
+    });
+
+}
+
+if (searchButton) {
+    searchButton.addEventListener(
+        "click",
+        function () {
+            searchMenu(
+                searchInput.value
+            );
+        }
+    );
+
+}
+
+
+let categoryCards = document.querySelectorAll("#categories article");
+
+function filterMenu(category) {
+
+    menuCards.forEach(function(card) {
+        let cardCategory = card.dataset.category.toLowerCase();
+
+        if (cardCategory === category) {
+            card.style.display = "";
+        }
+        else {
+            card.style.display = "none";
+        }
+    });
+
+}
+
+
+
+categoryCards.forEach(
+    function(card) {
+
+        card.addEventListener("click",function() {
+                let category = card.querySelector("h3")
+                        .textContent
+                        .trim()
+                        .toLowerCase();
+                filterMenu(category);
+            }
+        );
+
+    }
+)
+
+
 
 renderCart();
 updateOrderSummary(); 
