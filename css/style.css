@@ -2501,6 +2501,722 @@ footer>p {
 }
 
 
+/* ============================= */
+/* MENU SEARCH */
+/* ============================= */
+
+.menu-search {
+    width: 360px;
+    height: 48px;
+
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Search Input */
+
+.menu-search input {
+    flex: 1;
+
+    height: 100%;
+
+    padding: 0 18px;
+
+    border: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+    color: #333;
+
+    background-color: transparent;
+}
+
+
+/* Placeholder */
+
+.menu-search input::placeholder {
+    color: #777;
+}
+
+
+/* Search Button */
+
+.menu-search button {
+    width: 52px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background-color: #ff4b2b;
+
+    cursor: pointer;
+}
+
+
+.menu-search button:hover{
+    background-color: #ac1f06 ;
+
+}
+
+
+/* Search Icon */
+
+.menu-search button img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+
+
+
+/* =========================================
+   THEME TOGGLE
+========================================= */
+
+.theme-toggle {
+    width: 125px;
+    height: 36px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #e5e5e5;
+
+    position: relative;
+
+    padding: 3px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   THEME TEXT
+========================================= */
+
+.theme-text {
+    position: absolute;
+
+    left: 8px;
+    right: 38px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #111111;
+
+    white-space: nowrap;
+
+    text-align: left;
+
+    transition: all 0.35s ease-in-out;
+}
+
+
+/* =========================================
+   THEME ICON
+========================================= */
+
+.theme-icon {
+    position: absolute;
+
+    top: 3px;
+    left: 92px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    color: #111111;
+
+    transition: transform 0.35s ease-in-out;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   NIGHT MODE
+========================================= */
+
+.dark-theme .theme-icon {
+    transform: translateX(-89px);
+}
+
+
+.dark-theme .theme-text {
+    left: 38px;
+    right: 8px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.theme-toggle:hover .theme-icon {
+    transform: scale(1.05);
+}
+
+
+/* Keep smooth movement when in Night Mode */
+
+.dark-theme .theme-toggle:hover .theme-icon {
+    transform: translateX(-89px) scale(1.05);
+}
+
+
+
+
+
+
+
+.dark-theme .theme-icon {
+    transform: translateX(-89px);
+}
+
+
+.dark-theme .theme-text {
+    left: 38px;
+    right: 16px;
+
+    text-align: right;
+}
+
+
+.theme-toggle:hover .theme-icon {
+    transform: scale(1.05);
+}
+
+
+.dark-theme .theme-toggle:hover .theme-icon {
+    transform: translateX(-89px) scale(1.05);
+}
+
+
+/* =========================================================
+   NIGHT MODE - WHOLE PAGE
+   ========================================================= */
+
+body.dark-theme {
+    background: #121212;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+body.dark-theme header {
+    background: #000000;
+}
+
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+body.dark-theme #features,
+body.dark-theme #popular-dishes,
+body.dark-theme #reviews {
+    background: #121212 !important;
+}
+
+
+/* Features */
+
+body.dark-theme #features h2,
+body.dark-theme #features article h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #features article p {
+    color: #cccccc !important;
+}
+
+body.dark-theme #features article {
+    border-right-color: #333333;
+}
+
+
+/* Popular Dishes */
+
+body.dark-theme #popular-dishes h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #popular-dishes article {
+    background: #1e1e1e !important;
+}
+
+body.dark-theme #popular-dishes article h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #popular-dishes .ratings small {
+    color: #bbbbbb !important;
+}
+
+
+/* Reviews */
+
+body.dark-theme #reviews h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #reviews article {
+    background: #1e1e1e !important;
+}
+
+body.dark-theme #reviews article > p {
+    color: #cccccc !important;
+}
+
+body.dark-theme #reviews .customer h3 {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   MENU PAGE
+   ========================================================= */
+
+body.dark-theme #categories,
+body.dark-theme #menu-items {
+    background: #121212 !important;
+}
+
+
+/* Categories */
+
+body.dark-theme #categories h2,
+body.dark-theme #categories article h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #categories article img {
+    background: #1e1e1e;
+    border-color: #333333;
+}
+
+body.dark-theme #menu-items h2{
+    color: white;
+}
+
+
+/* Menu Cards */
+
+body.dark-theme #menu-items article {
+    background: #1e1e1e !important;
+    border-color: #333333 !important;
+}
+
+body.dark-theme #menu-items article h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #menu-items .rating small {
+    color: #bbbbbb !important;
+}
+
+body.dark-theme #menu-items .price {
+    color: #ffffff !important;
+}
+
+
+/* Add To Cart */
+
+body.dark-theme #menu-items article button {
+    background: #1e1e1e;
+    color: #ff6b00;
+    border-color: #ff6b00;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+body.dark-theme #story,
+body.dark-theme #mission-vision,
+body.dark-theme #chefs,
+body.dark-theme #statistics {
+    background: #121212 !important;
+}
+
+
+/* Our Story */
+
+body.dark-theme .story-content h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .story-content p {
+    color: #cccccc !important;
+}
+
+body.dark-theme .story-features h4 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .story-features article p {
+    color: #bbbbbb !important;
+}
+
+body.dark-theme .feature-icon {
+    background: #2a211f !important;
+}
+
+
+/* Mission & Vision */
+
+body.dark-theme #mission-vision > h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #mission-vision article {
+    background: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+}
+
+body.dark-theme #mission-vision article h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #mission-vision article p {
+    color: #cccccc !important;
+}
+
+body.dark-theme #mission-vision article img {
+    background: #2a211f !important;
+}
+
+
+/* Chefs */
+
+body.dark-theme #chefs > h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #chefs article {
+    background: #1e1e1e !important;
+}
+
+body.dark-theme #chefs article h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #chefs article p {
+    color: #cccccc !important;
+}
+
+
+/* Statistics */
+
+body.dark-theme #statistics > h2 {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+body.dark-theme #contact-info,
+body.dark-theme #contact-details,
+body.dark-theme #google-map {
+    background: #121212 !important;
+}
+
+
+/* Contact Heading */
+
+body.dark-theme #contact-info .section-title h2 {
+    color: #ffffff !important;
+}
+
+
+/* Contact Cards */
+
+body.dark-theme .contact-container article {
+    background: #1e1e1e !important;
+    color: #ffffff;
+}
+
+body.dark-theme .contact-container article h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .contact-container article p {
+    color: #cccccc !important;
+}
+
+
+/* Contact Details */
+
+body.dark-theme #contact-details {
+    background: #1b1816 !important;
+}
+
+
+/* Business Hours */
+
+body.dark-theme .business-card h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .business-card td {
+    color: #cccccc !important;
+}
+
+body.dark-theme .business-card td:last-child {
+    color: #ffffff !important;
+}
+
+
+/* Event Card */
+
+body.dark-theme .event-card {
+    background: #24201e !important;
+    border-color: #3a3a3a !important;
+}
+
+body.dark-theme .event-card h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .event-card p {
+    color: #cccccc !important;
+}
+
+
+/* Contact Form */
+
+body.dark-theme .right-column h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .form-row input,
+body.dark-theme #contact-details textarea {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .form-row input::placeholder,
+body.dark-theme #contact-details textarea::placeholder {
+    color: #999999 !important;
+}
+
+
+/* Google Map */
+
+body.dark-theme #google-map .section-title h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #google-map .section-title p {
+    color: #cccccc !important;
+}
+
+
+/* =========================================================
+   CART PAGE
+   ========================================================= */
+
+body.dark-theme #cart-details {
+    background: #121212 !important;
+}
+
+
+/* Shopping Cart */
+
+body.dark-theme #shopping-cart {
+    background: #1e1e1e !important;
+    border-color: #333333 !important;
+}
+
+body.dark-theme #shopping-cart thead {
+    background: #2a211c !important;
+}
+
+body.dark-theme #shopping-cart th {
+    color: #ffffff !important;
+}
+
+body.dark-theme #shopping-cart td {
+    border-top-color: #333333 !important;
+}
+
+body.dark-theme .cart-item h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .cart-item p {
+    color: #bbbbbb !important;
+}
+
+
+/* Quantity Box */
+
+body.dark-theme .quantity-box {
+    background: #1e1e1e !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .quantity-box button {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .quantity-box span {
+    color: #ffffff !important;
+}
+
+
+/* Cart Hover */
+
+body.dark-theme #shopping-cart tbody tr:hover {
+    background: #252525 !important;
+}
+
+
+/* Order Summary */
+
+body.dark-theme #order-summary {
+    background: #1e1e1e !important;
+    border-color: #333333 !important;
+}
+
+body.dark-theme #order-summary h2,
+body.dark-theme #order-summary h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme #order-summary p {
+    color: #cccccc !important;
+}
+
+body.dark-theme #order-summary hr {
+    border-top-color: #444444 !important;
+}
+
+
+/* Cart Actions */
+
+body.dark-theme #cart-actions a {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+
+
+.theme-loading .theme-icon,
+.theme-loading .theme-text {
+    transition: none !important;
+}
+
+
+
+
+.cart-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon img {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    background: #ff3b30;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.toast {
+    position: fixed;
+    top: 150px;
+    right: 25px;
+    min-width: 280px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(120%);
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast.error {
+    background: #e53935;
+}
+
+.toast.success {
+    background: #28a745;
+}
 
 
 
@@ -3832,97 +4548,6 @@ footer>p {
 
 
 }
-
-
-
-
-/* ============================= */
-/* MENU SEARCH */
-/* ============================= */
-
-.menu-search {
-    width: 360px;
-    height: 48px;
-
-    margin: 30px auto;
-
-    display: flex;
-    align-items: center;
-
-    background-color: white;
-
-    border: 1px solid #ddd;
-    border-radius: 25px;
-
-    overflow: hidden;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
-/* Search Input */
-
-.menu-search input {
-    flex: 1;
-
-    height: 100%;
-
-    padding: 0 18px;
-
-    border: none;
-    outline: none;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-
-    color: #333;
-
-    background-color: transparent;
-}
-
-
-/* Placeholder */
-
-.menu-search input::placeholder {
-    color: #777;
-}
-
-
-/* Search Button */
-
-.menu-search button {
-    width: 52px;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: none;
-
-    background-color: #ff4b2b;
-
-    cursor: pointer;
-}
-
-
-.menu-search button:hover{
-    background-color: #ac1f06 ;
-
-}
-
-
-/* Search Icon */
-
-.menu-search button img {
-    width: 20px;
-    height: 20px;
-
-    object-fit: contain;
-}
-
-
-
 
 
 
