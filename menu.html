@@ -8,41 +8,43 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700;800&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700;800&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header>
-        <!--Restaurant Name-->
-        <img src="assets/images/logo.png" alt="BiteBox Logo" class="logo">
+    <!--Restaurant Name-->
+    <img src="assets/images/logo.png" alt="BiteBox Logo" class="logo">
 
-        <!--Navigation Menu-->
-        <nav>
-            <a href="index.html"> Home</a>
-            
-            <a href="menu.html" class="active">Menu</a>
-            
-            <a href="about.html">About</a>
-            
-            <a href="contact.html">Contact</a>
+    <!--Navigation Menu-->
+    <nav>
+      <a href="index.html"> Home</a>
 
-            <a href="cart.html" class="cart-icon">
-                <span class="cart-wrapper">
-                <img src="assets/icons/cart.png" alt="Cart Icon" width="22" height="22">
-                 <span id="cart-count">0</span>
-            </span>
-            </a>
+      <a href="menu.html" class="active">Menu</a>
 
-             <button type="button" id="theme-toggle" class="theme-toggle">
-                <span class="theme-icon">☀</span>
-                <span class="theme-text">
-                    DAY MODE
-                </span>
-            </button>
-            
-        </nav>
+      <a href="about.html">About</a>
 
-    </header>
+      <a href="contact.html">Contact</a>
+
+      <a href="cart.html" class="cart-icon">
+        <span class="cart-wrapper">
+          <img src="assets/icons/cart.png" alt="Cart Icon" width="22" height="22">
+          <span id="cart-count">0</span>
+        </span>
+      </a>
+
+      <button type="button" id="theme-toggle" class="theme-toggle">
+        <span class="theme-icon">☀</span>
+        <span class="theme-text">
+          DAY MODE
+        </span>
+      </button>
+
+    </nav>
+
+  </header>
 
 
   <!--Menu hero section-->
@@ -101,26 +103,101 @@
       <span></span>
     </h2>
 
-    <div class="menu-search">
 
-    <input
-        type="text"
-        id="menu-search"
-        placeholder="Search for dishes..."
-    >
+    <div class="menu-controls">
 
-    <button type="button" id="search-button">
-        <img
-            src="assets/icons/search.png"
-            alt="Search"
-            width="20"
-            height="20"
-        >
-    </button>
+      <div class="menu-search">
 
-</div>
+        <input type="text" id="menu-search" placeholder="Search for dishes...">
 
-    <div>
+        <button type="button" id="search-button">
+          <img src="assets/icons/search.png" alt="Search" width="20" height="20">
+        </button>
+
+      </div>
+
+      <button type="button" id="add-menu-btn">
+        + Add Menu Item
+      </button>
+
+    </div>
+
+
+    <!-- Add Menu Item Modal -->
+
+    <div id="menu-modal" class="menu-modal">
+
+      <div class="menu-modal-content">
+
+        <div class="modal-header">
+
+          <h2>Add Menu Item</h2>
+
+        </div>
+
+
+        <form id="menu-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="menu-name"> Menu Item Name </label>
+              <input type="text" id="menu-name" placeholder="Enter item name" required>
+            </div>
+
+
+            <div class="form-group">
+              <label for="menu-price"> Price (₹) </label>
+              <input type="number" id="menu-price" placeholder="Enter price" required>
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="menu-category"> Category </label>
+              <input type="text" id="menu-category" placeholder="Enter category" required>
+            </div>
+
+
+            <div class="form-group">
+              <label for="menu-rating"> Rating (0 - 5) </label>
+              <input type="text" id="menu-rating" placeholder="★★★★★" required>
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="menu-reviews"> Number of Reviews </label>
+              <input type="number" id="menu-reviews" placeholder="Enter number of reviews" required>
+            </div>
+
+
+            <div class="form-group">
+              <label for="menu-image"> Image URL / Path </label>
+              <input type="text" id="menu-image" placeholder="Enter image URL or path" required>
+            </div>
+
+          </div>
+
+
+          <div class="form-actions">
+            <button type="button" id="cancel-menu-form"> Cancel </button>
+            <button type="submit"> Add Menu Item </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div id="menu-container">
 
       <!-- Menu Item 1 -->
 
@@ -133,11 +210,23 @@
         <h3>Margherita Pizza</h3>
 
         <p class="rating">
-          &#9733;&#9733;&#9733;&#9733;&#9733;
+          ★★★★★
           <small>(120)</small>
         </p>
 
         <p class="price">₹249</p>
+
+        <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
 
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
@@ -161,6 +250,18 @@
 
         <p class="price">₹199</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -183,6 +284,18 @@
 
         <p class="price">₹229</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -192,7 +305,7 @@
 
       <!-- Menu Item 4 -->
 
-      <article data-category="biryani>
+      <article data-category="biryani">
 
         <span class="tag spicy">Spicy</span>
 
@@ -207,6 +320,18 @@
 
         <p class="price">₹279</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -216,7 +341,7 @@
 
       <!-- Menu Item 5 -->
 
-      <article data-category="desert">
+      <article data-category="desserts">
 
         <img src="assets/images/choco-lava-cake.png" alt="Choco Lava Cake">
 
@@ -228,6 +353,18 @@
         </p>
 
         <p class="price">₹149</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
 
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
@@ -251,6 +388,18 @@
 
         <p class="price">₹179</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -262,7 +411,7 @@
 
       <article data-category="tandoor">
 
-        <img src="assets/images/paneer-tikka.png" >
+        <img src="assets/images/paneer-tikka.png">
 
         <h3>Paneer Tikka</h3>
 
@@ -272,6 +421,18 @@
         </p>
 
         <p class="price">₹210</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
 
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
@@ -295,6 +456,18 @@
 
         <p class="price">₹320</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -317,6 +490,18 @@
 
         <p class="price">₹200</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -328,7 +513,7 @@
 
       <article data-category="pasta">
 
-        <img src="assets/images/red-sauce-pasta.png" >
+        <img src="assets/images/red-sauce-pasta.png">
 
         <h3>Red Sauce Pasta</h3>
 
@@ -339,6 +524,18 @@
 
         <p class="price">₹229</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -348,7 +545,7 @@
 
       <!-- Menu Item 11 -->
 
-      <article data-category="desert">
+      <article data-category="desserts">
 
         <img src="assets/images/chocolate-smoothy.png">
 
@@ -360,6 +557,18 @@
         </p>
 
         <p class="price">₹120</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
 
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
@@ -377,12 +586,25 @@
 
         <h3>Chicken Fried Rice</h3>
 
+
         <p class="rating">
           &#9733;&#9733;&#9733;&#9733;&#9733;
           <small>(175)</small>
         </p>
 
         <p class="price">₹310</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
 
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
@@ -408,6 +630,18 @@
 
         <p class="price">₹349</p>
 
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
           Add to Cart
@@ -416,7 +650,7 @@
       </article>
 
 
-      
+
       <article data-category="pizza">
 
         <img src="assets/images/veggie-paradise.png">
@@ -429,6 +663,18 @@
         </p>
 
         <p class="price">₹489</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
 
         <button>
           <img src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
@@ -446,96 +692,96 @@
 
 
   <!-- Footer Logo Section -->
-   <footer>
-        <div class="footer-container">
-        <section>
-            <img src="assets/images/logo.png" alt="BiteBox Logo" width="180">
-            <p> Delicious food delivered to your doorstep.
-                Fresh, fast and tasty!
-            </p>
+  <footer>
+    <div class="footer-container">
+      <section>
+        <img src="assets/images/logo.png" alt="BiteBox Logo" width="180">
+        <p> Delicious food delivered to your doorstep.
+          Fresh, fast and tasty!
+        </p>
 
-            <div class="footer-socials">
+        <div class="footer-socials">
 
-            <a href="#">
-                <img src="assets/icons/facebook.png" alt="Facebook" width="35" height="35">
-            </a>
+          <a href="#">
+            <img src="assets/icons/facebook.png" alt="Facebook" width="35" height="35">
+          </a>
 
-            <a href="#">
-                <img src="assets/icons/instagram.png" alt="Instagram" width="35" height="35">
-            </a>
+          <a href="#">
+            <img src="assets/icons/instagram.png" alt="Instagram" width="35" height="35">
+          </a>
 
-            <a href="#">
-                <img src="assets/icons/twitter.png" alt="Twitter" width="35" height="35">
-            </a>
+          <a href="#">
+            <img src="assets/icons/twitter.png" alt="Twitter" width="35" height="35">
+          </a>
 
-            <a href="#">
-                <img src="assets/icons/youtube.png" alt="YouTube" width="35" height="35">
-            </a>
-            </div>
-        </section>
+          <a href="#">
+            <img src="assets/icons/youtube.png" alt="YouTube" width="35" height="35">
+          </a>
+        </div>
+      </section>
 
-        
 
-        <!-- Quick Links -->
 
-        <section>
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </section>
+      <!-- Quick Links -->
 
-        
+      <section>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </section>
 
-        <!-- Customer Service -->
-        <section>
-            <h3>Customer Service</h3>
-            <ul>
-                <li>Track Order</li>
-                <li>FAQs</li>
-                <li>Shipping Policy</li>
-                <li>Return Policy</li>
-                <li>Terms & Conditions</li>
-            </ul>
 
-        </section>
 
-        
+      <!-- Customer Service -->
+      <section>
+        <h3>Customer Service</h3>
+        <ul>
+          <li>Track Order</li>
+          <li>FAQs</li>
+          <li>Shipping Policy</li>
+          <li>Return Policy</li>
+          <li>Terms & Conditions</li>
+        </ul>
 
-        <!-- Contact Information -->
+      </section>
 
-        <section>
-            <h3>Contact Us</h3>
-            <p>📞 +91 98765 43210</p>
-            <p>✉ support@bitebox.com</p>
-            <p> 📍 123 Food Street, Mumbai, Maharashtra 400001 </p>
-        </section>
 
-    
 
-        <!-- Payment Methods -->
+      <!-- Contact Information -->
 
-        <section>
-            <h3>Payment Methods</h3>
-            <div class="payment-icons">
-            <img src="assets/images/visa.png" alt="Visa" >
-            <img src="assets/images/mastercard.png" alt="MasterCard" >
-            <img src="assets/images/upi.png" alt="UPI" >
-            <img src="assets/images/paytm.png" alt="Paytm">
-            </div>
-        </section>
+      <section>
+        <h3>Contact Us</h3>
+        <p>📞 +91 98765 43210</p>
+        <p>✉ support@bitebox.com</p>
+        <p> 📍 123 Food Street, Mumbai, Maharashtra 400001 </p>
+      </section>
+
+
+
+      <!-- Payment Methods -->
+
+      <section>
+        <h3>Payment Methods</h3>
+        <div class="payment-icons">
+          <img src="assets/images/visa.png" alt="Visa">
+          <img src="assets/images/mastercard.png" alt="MasterCard">
+          <img src="assets/images/upi.png" alt="UPI">
+          <img src="assets/images/paytm.png" alt="Paytm">
+        </div>
+      </section>
     </div>
 
-    
-        <p> © 2026 BiteBox. All Rights Reserved. </p>
 
-    </footer>
+    <p> © 2026 BiteBox. All Rights Reserved. </p>
 
-<script src ="js/script.js"></script>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 
 
